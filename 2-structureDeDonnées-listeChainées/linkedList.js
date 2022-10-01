@@ -25,7 +25,22 @@ class LinkedList
             this.head = new Node(value,current)
         }
         this.size ++ ;
+
     }
+
+
+    removeFirst(){
+        let current = this.head;
+        if(!current){
+          return null;
+        }else{
+            current = this.head.next
+            return current.value
+        }
+    }
+
+
+
 
 
     addLast(value){
@@ -40,6 +55,8 @@ class LinkedList
         }
         this.size ++ ;
     }
+
+
 
 
     add(value,position){
@@ -83,7 +100,9 @@ linkedList.addLast('c')
 linkedList.print()
 linkedList.add('d',1)
 linkedList.print()
-linkedList.add('e',3);
+console.log(linkedList.removeFirst())
+linkedList.addLast('e',3);
+linkedList.print()
 linkedList.print()
 linkedList.add('f',4);
 
